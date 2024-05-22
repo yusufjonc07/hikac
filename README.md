@@ -16,7 +16,7 @@ pip install hikac
 from hikac import get_data_from_ac_event
 
 @attandance_router.post("/attandance/face-id", include_in_schema=False)
-async def get_attandance_users_list(
+async def listen_for_ac_event(
     req: Request,
     db: Session = ActiveSession,
 ):
