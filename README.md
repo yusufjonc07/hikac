@@ -7,8 +7,9 @@ This modest python package helps you to get events from HIKVISION AC terminals.
 ```sh
 pip install hikac
 
+```
 
-## Usage: example in FastAPI
+## Usage in FastAPI
 
 ```sh
 
@@ -31,5 +32,5 @@ async def get_attandance_users_list(
             return "success"
     except Exception as e:
         print(e.args)
-
+```
 
