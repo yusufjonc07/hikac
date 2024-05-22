@@ -1,26 +1,44 @@
-# HIKVISION AC REQUEST MANAGER
-A package used to get needy data from Hikvision ac device request.
+# HIKAC
 
-## How to use
-_After installing the package use following import:_ <br>
+This modest python package helps you to get events from HIKVISION AC terminals. 
 
-**from hikac import get_data_from_ac_event
+## Installation
 
-_In Your Api router, you can also use like that:_
+```sh
+pip install hikac
 
-**@attandance_router.post("/attandance/face-id", include_in_schema=False)
-**async def get_attandance_users_list(
-**    req: Request,
-**    db: Session = ActiveSession,
-**):
-**    try:
-**        # use the class to collect nececary items of dict
-**        eventData = await get_data_from_ac_event(req)
-**
-**        if eventData.attendanceStatus:
-**            await makeDavomat(eventData.employeeId, eventData.attendanceStatus, eventData.dateTime, eventData.deviceName, db)
-**
-**            return "success"
-**    except Exception as e:
-**        print(e.args)
-**
+```
+
+## Usage in FastAPI
+
+```sh
+
+from hikac import get_data_from_ac_event
+
+@attandance_router.post("/attandance/face-id", include_in_schema=False)
+async def listen_for_ac_event(
+    req: Request,
+    db: Session = ActiveSession,
+):
+    try:
+
+        # use the class to collect nececary items of dict
+        eventData = await get_data_from_ac_event(req)
+
+        if eventData.attendanceStatus:
+
+            #you can use these attributes
+            #eventData.deviceIpAddress
+            #eventData.attendanceStatus
+            #eventData.deviceName
+            #eventData.dateTime
+            #eventData.employeeId
+            #eventData.employeeName
+
+            # write  your logic here
+
+            return "success"
+    except Exception as e:
+        print(e.args)
+```
+

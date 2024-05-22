@@ -42,3 +42,7 @@ async def listen_for_ac_event(
         print(e.args)
 ```
 
+## How to configure Hikvision device - Soon!
+![Http Litening](./hiklistening.jpg)
+
+

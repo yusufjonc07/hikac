@@ -5,7 +5,7 @@ with open("app/README.md", "r") as f:
 
 setup(
     name="hikac",
-    version="0.0.11",
+    version="0.0.13",
     description="A hikvision access control request manager",
     package_dir={"": "app"},
     packages=find_packages(where="app"),
