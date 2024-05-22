@@ -1,28 +1,28 @@
 from setuptools import find_packages, setup
 
+with open("app/README.md", "r") as f:
+    long_description = f.read()
+
 setup(
-    name='hikvision_ac_python',
-    version='0.1.0',
-    packages=find_packages(),
-    install_requires=[
-       'starlette',
-    ],
-    author='Yusufjon Axmedov',
-    author_email='yahmedov64@gmail.com',
-    description='This modest python package helps you to get events from HIKVISION AC terminals.',
-    long_description=open('./app/README.md').read(),
-    long_description_content_type='text/markdown',
-    url='https://github.com/yusujonc07/hikvision-ac-python',
-    license='MIT',
+    name="hikac",
+    version="0.0.11",
+    description="A hikvision access control request manager",
+    package_dir={"": "app"},
+    packages=find_packages(where="app"),
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/yusufjonc07/hikac",
+    author="YusufAxmad",
+    author_email="studentyusufaxmad@gmail.com",
+    license="MIT",
     classifiers=[
-        'Development Status :: 3 - Alpha',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
-        'Programming Language :: Python :: 3.10',
-        'Programming Language :: Python :: 3.11',
-        'Programming Language :: Python :: 3.12',
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3.8",
+        "Operating System :: OS Independent",
     ],
-    python_requires=">=3.8"
+    install_requires=["starlette"],
+    extras_require={
+        "dev": ["pytest>=7.0", "twine>=4.0.2"],
+    },
+    python_requires=">=3.8",
 )

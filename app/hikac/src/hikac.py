@@ -7,7 +7,6 @@ from starlette.requests import Request
 
 class HikvsionEvent:
 
-
     # device's ip address
     deviceIpAddress: str
 

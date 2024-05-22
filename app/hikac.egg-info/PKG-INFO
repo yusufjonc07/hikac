@@ -1,3 +1,20 @@
+Metadata-Version: 2.1
+Name: hikac
+Version: 0.0.11
+Summary: A hikvision access control request manager
+Home-page: https://github.com/yusufjonc07/hikac
+Author: YusufAxmad
+Author-email: studentyusufaxmad@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
 # HIKVISION AC REQUEST MANAGER
 A package used to get needy data from Hikvision ac device request.
 
@@ -24,3 +41,5 @@ _In Your Api router, you can also use like that:_
 **    except Exception as e:
 **        print(e.args)
 **
+
+
