@@ -27,7 +27,15 @@ async def get_attandance_users_list(
 
         if eventData.attendanceStatus:
 
-            # write here your main code
+            #you can use these attributes
+            #eventData.deviceIpAddress
+            #eventData.attendanceStatus
+            #eventData.deviceName
+            #eventData.dateTime
+            #eventData.employeeId
+            #eventData.employeeName
+
+            # write  your logic here
 
             return "success"
     except Exception as e:
