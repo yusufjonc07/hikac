@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 setup(
-    name='hikvision-ac-python',
+    name='hikvision_ac_python',
     version='0.1.0',
     packages=find_packages(),
     install_requires=[
@@ -10,7 +10,7 @@ setup(
     author='Yusufjon Axmedov',
     author_email='yahmedov64@gmail.com',
     description='This modest python package helps you to get events from HIKVISION AC terminals.',
-    long_description=open('README.md').read(),
+    long_description=open('./app/README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/yusujonc07/hikvision-ac-python',
     license='MIT',
@@ -24,4 +24,5 @@ setup(
         'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: 3.12',
     ],
+    python_requires=">=3.8"
 )
